@@ -7,42 +7,77 @@
     android:orientation="vertical"
     tools:context="qiqi.love.you.search.MainActivity">
 
-    <ScrollView
+    <qiqi.love.you.search.JDSearchScrollView
+        android:id="@+id/jd_scroll_view"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
 
             <ImageView
                 android:id="@+id/image_view"
                 android:layout_width="match_parent"
                 android:layout_height="200dp"
+                android:background="@android:color/holo_blue_dark"
+                android:paddingBottom="100dp"
+                android:paddingTop="200dp"
+                android:scaleType="fitXY" />
+
+            <ImageView
+                android:id="@+id/image_view1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#6aa84f"
                 android:scaleType="fitXY"
                 android:src="@mipmap/img2" />
+
+            <ImageView
+                android:id="@+id/image_view2"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:background="#6aa84f"
+                android:scaleType="fitXY" />
+
+            <ImageView
+                android:id="@+id/image_view3"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:background="#6aa84f"
+                android:scaleType="fitXY" />
+
+            <ImageView
+                android:id="@+id/image_view4"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:background="#6aa84f"
+                android:scaleType="fitXY" />
+
         </LinearLayout>
-    </ScrollView>
+    </qiqi.love.you.search.JDSearchScrollView>
 
     <RelativeLayout
-        android:id="@+id/rl_layout"
+        android:id="@+id/relative_layout"
         android:layout_width="match_parent"
         android:layout_height="48dp"
-        android:background="#FFFFFF"
+        android:background="@android:color/transparent"
         android:visibility="visible">
 
         <TextView
-            android:id="@+id/sys"
+            android:id="@+id/tv_left"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:gravity="center"
             android:paddingLeft="8dp"
             android:paddingRight="8dp"
-            android:text="扫一扫"
+            android:text="扫啊扫"
+            android:textColor="@android:color/white"
             android:textSize="16sp" />
 
         <TextView
-            android:id="@+id/xx"
+            android:id="@+id/tv_right"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_alignParentRight="true"
@@ -50,15 +85,22 @@
             android:paddingLeft="8dp"
             android:paddingRight="8dp"
             android:text="消息"
+            android:textColor="@android:color/white"
             android:textSize="16sp" />
 
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_toLeftOf="@id/xx"
-            android:layout_toRightOf="@id/sys"
-            android:hint="搜索：首页下拉摇一摇"
-            android:textSize="16sp" />
+        <TextView
+            android:id="@+id/tv_center"
+            android:layout_width="wrap_content"
+            android:layout_height="32dp"
+            android:layout_centerInParent="true"
+            android:alpha="0.8"
+            android:background="@drawable/tv_bg"
+            android:gravity="center"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:text="搜索：首页下拉摇一摇"
+            android:textColor="@android:color/white"
+            android:textSize="14sp" />
     </RelativeLayout>
 
 </RelativeLayout>
