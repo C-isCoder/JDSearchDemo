@@ -39,7 +39,7 @@ public class MainActivity extends AppCompatActivity {
     private void initView2() {
         //是否外部调用
         //mJdSearchScrollView.setIsOut(true);
-        mJdSearchScrollView.setChangeBackgroundColor(Color.WHITE);
+        mJdSearchScrollView.setBackgroundRGB(255, 200, 111, true);
         mJdSearchScrollView.setLeft(mTextViewLeft);
         mJdSearchScrollView.setRight(mTextViewRight);
         mJdSearchScrollView.setView(mRelativeLayout);

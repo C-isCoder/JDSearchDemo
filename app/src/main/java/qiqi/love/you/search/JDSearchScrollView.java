@@ -57,7 +57,7 @@ public class JDSearchScrollView extends ScrollView {
      * 改变的背景颜色RGB
      * 默认白色
      */
-    private int r = 255, g = 255, b = 255;
+    private int r = 255, g = 0, b = 0;
     /**
      * 启用RGB颜色
      */
@@ -124,10 +124,11 @@ public class JDSearchScrollView extends ScrollView {
                 mRight.setTextColor(mChangeTextColor);
                 mCenter.setTextColor(mChangeTextColor);
             } else {
-                //mView.setAlpha(alpha);
-                //mView.setBackgroundColor(mChangeBackgroundColor);
-                int color = Color.argb(alpha, r, g, b);
-                mView.setBackgroundColor(color);
+                //RGB模式才有渐变的效果，不知道为啥。
+                mView.setAlpha(alpha);
+                mView.setBackgroundColor(mChangeBackgroundColor);
+                //int color = Color.argb(alpha, r, g, b);
+                //mView.setBackgroundColor(color);
                 mLeft.setTextColor(mChangeTextColor);
                 mRight.setTextColor(mChangeTextColor);
                 mCenter.setTextColor(mChangeTextColor);
@@ -183,7 +184,7 @@ public class JDSearchScrollView extends ScrollView {
         mChangeTextColor = color;
     }
 
-    public void setBackgroundRBG(int r, int g, int b, boolean isRGB) {
+    public void setBackgroundRGB(int r, int g, int b, boolean isRGB) {
         this.r = r;
         this.g = g;
         this.b = b;
