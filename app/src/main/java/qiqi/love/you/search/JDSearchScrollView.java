@@ -92,7 +92,7 @@ public class JDSearchScrollView extends ScrollView {
     @Override
     protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
         super.onMeasure(widthMeasureSpec, heightMeasureSpec);
-        //ScrollView有且只有一个子布局LinearLayout
+        //ScrollView有且只有一个子布局,因为ScrollView是继承自FrameLayout,没法控制布局所以ScrollVIew只能有一个子布局
         LinearLayout linearLayout = (LinearLayout) getChildAt(0);
         if (linearLayout.getChildCount() != 0 && !isOut) {
             View view = linearLayout.getChildAt(0);
